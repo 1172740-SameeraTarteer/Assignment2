@@ -50,6 +50,21 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("Email",email);
         intent.putExtra("Gender",gender);
         startActivity(intent);
+        try {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            Gson gson = new Gson();
+            String str = prefs.getString("cv", "");
+            CVinfo cv = gson.fromJson(str, CVinfo.class);
+            if (str.trim().length() != 0) {
+                edtName.setText(cv.getName());
+                edtHobbies.setText(cv.getHobbies());
+                edtPhone.setText(cv.getPhone());
+                edtEmail.setText(cv.getEmail());
+
+            }
+        } catch (Exception e) {
+            System.out.println();
+        }
 
     }
 
