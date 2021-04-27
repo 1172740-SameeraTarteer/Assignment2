@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:background="@color/blue"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Education"
+            style="@style/title"
+
+            />
+
+        <EditText
+            android:id="@+id/edtEdu"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Experience"
+            style="@style/title"
+
+            />
+
+        <EditText
+            android:id="@+id/edtExperience"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+
+
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Skills"
+            style="@style/title"
+
+            />
+        <EditText
+            android:id="@+id/edtSkills"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft= "10dp"
+
+            />
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFinish"
+        android:text="Finish"
+        android:onClick="Finish"
+
+        />
+
+</LinearLayout>
