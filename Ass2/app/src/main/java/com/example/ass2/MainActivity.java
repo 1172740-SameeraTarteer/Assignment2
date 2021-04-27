@@ -3,11 +3,16 @@ package com.example.ass2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.example.ass2.model.CVinfo;
+import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,10 +55,26 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("Email",email);
         intent.putExtra("Gender",gender);
         startActivity(intent);
+        try {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            Gson gson = new Gson();
+            String str = prefs.getString("cv", "");
+            CVinfo cv = gson.fromJson(str, CVinfo.class);
+            if (str.trim().length() != 0) {
+                edtName.setText(cv.getName());
+                edtHobbies.setText(cv.getHobbies());
+                edtPhone.setText(cv.getPhone());
+                edtEmail.setText(cv.getEmail());
+
+            }
+        } catch (Exception e) {
+            System.out.println();
+        }
 
     }
 
     public void save(View view) {
+
 
     }
 }

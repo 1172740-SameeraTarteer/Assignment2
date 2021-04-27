@@ -77,10 +77,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
                 editor.commit();
-                Toast.makeText(MainActivity2.this, "Data Saved:\n" + cvString,Toast.LENGTH_SHORT).show();
 
-
-                System.out.println(cvString);
                 Log.d("object", cvString);
 
             }
